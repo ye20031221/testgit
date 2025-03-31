@@ -1,0 +1,88 @@
+Building configuration...
+
+Current configuration : 1205 bytes
+!
+version 12.2
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+no service password-encryption
+!
+hostname S2950C
+!
+enable secret 5 $1$mERr$H7PDxl7VYMqaD3id4jJVK/
+!
+!
+!
+!
+spanning-tree mode rapid-pvst
+!
+interface FastEthernet0/1
+!
+interface FastEthernet0/2
+ switchport access vlan 30
+!
+interface FastEthernet0/3
+!
+interface FastEthernet0/4
+!
+interface FastEthernet0/5
+!
+interface FastEthernet0/6
+!
+interface FastEthernet0/7
+!
+interface FastEthernet0/8
+!
+interface FastEthernet0/9
+!
+interface FastEthernet0/10
+!
+interface FastEthernet0/11
+!
+interface FastEthernet0/12
+!
+interface FastEthernet0/13
+!
+interface FastEthernet0/14
+!
+interface FastEthernet0/15
+!
+interface FastEthernet0/16
+!
+interface FastEthernet0/17
+!
+interface FastEthernet0/18
+!
+interface FastEthernet0/19
+!
+interface FastEthernet0/20
+!
+interface FastEthernet0/21
+!
+interface FastEthernet0/22
+!
+interface FastEthernet0/23
+ switchport mode trunk
+!
+interface FastEthernet0/24
+ switchport mode trunk
+!
+interface GigabitEthernet1/1
+!
+interface GigabitEthernet1/2
+!
+interface Vlan1
+ ip address 192.168.0.5 255.255.255.0
+ shutdown
+!
+!
+line con 0
+!
+line vty 0 4
+ password 123456
+ login
+line vty 5 15
+ login
+!
+!
+end
